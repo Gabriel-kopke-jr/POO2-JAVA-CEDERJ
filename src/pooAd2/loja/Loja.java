@@ -32,14 +32,19 @@ public class Loja {
            }
         }
     }
-    private Produto findByName(String nomeProduto){
-        for (int i=0; i < produtos.length;i++){
-           Produto comparable = this.produtos[i];
-           if (comparable.getNome().toLowerCase().strip().equalsIgnoreCase(nomeProduto)){
-               return comparable;
-           }
+    private Produto findByName(String nomeProduto) {
+        try {
+            for (int i = 0; i < produtos.length; i++) {
+                Produto comparable = this.produtos[i];
+                if (comparable.getNome().toLowerCase().strip().equalsIgnoreCase(nomeProduto)) {
+                    return comparable;
+                }
+            }
+            return null;
+
+        } catch (NullPointerException nullPointerException) {
+            return null;
         }
-        return null;
     }
 
     public int getQuantityStock(String nomeProduto){
