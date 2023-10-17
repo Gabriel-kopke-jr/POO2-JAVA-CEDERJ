@@ -1,0 +1,4 @@
+Loja São Gonçalo
+Manga;42
+Leite;91
+Arroz branco;65
